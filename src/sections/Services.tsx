@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Services = () => {
   const services = [
     { icon: "🏢", title: "Real Estate Financing" },
@@ -7,36 +9,71 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-black py-20 px-6 text-white">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12">What We Do</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+    <motion.section
+      id="services"
+      className="bg-[#0d0d0d] py-24 px-6 text-white"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold mb-12 text-[#e50914]"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          What We Do
+        </motion.h2>
+
+        {/* Service Cards */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-gray-800 p-6 rounded-lg hover:scale-105 transition-transform">
+            <motion.div
+              key={idx}
+              className="bg-[#1a1a1a] p-6 rounded-lg hover:scale-105 transform transition-transform duration-300 shadow-md"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="font-semibold">{service.title}</h3>
-            </div>
+              <h3 className="font-semibold text-lg">{service.title}</h3>
+            </motion.div>
           ))}
         </div>
 
-        {/* Additional info box with image */}
-        <div className="bg-gray-900 rounded-lg shadow-lg p-8 grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto text-left">
+        {/* Additional Info Box */}
+        <motion.div
+          className="bg-[#121212] rounded-lg shadow-xl p-10 grid md:grid-cols-2 gap-10 items-center text-left"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <div>
-            <p className="text-gray-300 leading-relaxed">
-              At <span className="text-white font-semibold">Ashton & Co. Commercial Brokers</span>, we provide direct access to capital for real estate, business expansion, and equipment acquisition.
-              Our services include commercial real estate financing, business loans, equipment financing, startup funding, merchant cash advances, and franchise financing—tailored solutions to meet the capital needs of growing businesses.
+            <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+              At <span className="text-white font-semibold">Ashton & Co. Commercial Brokers</span>, we provide
+              direct access to capital for real estate, business expansion, and equipment acquisition.
+              <br /><br />
+              Our offerings include <strong>commercial real estate financing</strong>,
+              <strong> business loans</strong>, <strong>equipment financing</strong>,
+              <strong> startup funding</strong>, <strong>merchant cash advances</strong>, and
+              <strong> franchise financing</strong>—tailored solutions to meet the capital needs of growing businesses.
             </p>
           </div>
           <div>
             <img
               src="/assets/real-estate.webp"
               alt="Real estate financing"
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md w-full"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

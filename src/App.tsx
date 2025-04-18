@@ -6,7 +6,7 @@ import Footer from './sections/Footer';
 
 const App = () => {
   return (
-    <div className="font-sans">
+    <div className="font-outfit bg-[#0d0d0d] text-white">
       <Hero />
       <About />
       <Services />
