@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center items-center text-white px-6 text-center"
+      className="relative min-h-screen flex flex-col justify-center items-center text-white px-6 text-center pt-[64px]"
       style={{
         backgroundImage: "url('/assets/contract.jpg')",
         backgroundSize: "cover",
