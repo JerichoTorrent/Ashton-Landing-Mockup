@@ -13,14 +13,14 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#0d0d0d] text-white px-6 py-4 border-b border-[#1f1f1f] z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[#0d0d0d] text-white px-6 border-b border-[#1f1f1f] z-50">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
           <img
             src="/assets/ashton-logo.webp"
             alt="Ashton Logo"
-            className="h-10 w-auto"
+            className="h-21 w-auto"
           />
         </Link>
 
