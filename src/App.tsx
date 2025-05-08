@@ -9,6 +9,7 @@ import Resources from "./sections/Resources";
 import Markets from './sections/Markets';
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
+import Apply from "./sections/Apply";
 
 const Home = () => (
   <>
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/markets" element={<Markets />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/apply" element={<Apply />} />
         </Routes>
       </main>
       <Footer />
