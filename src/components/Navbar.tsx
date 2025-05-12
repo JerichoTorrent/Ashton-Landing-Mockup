@@ -20,7 +20,7 @@ const Navbar = () => {
           <img
             src="/assets/ashton-logo.webp"
             alt="Ashton Logo"
-            className="h-21 w-auto"
+            className="h-28 w-auto"
           />
         </Link>
 
