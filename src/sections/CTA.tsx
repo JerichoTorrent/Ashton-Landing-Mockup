@@ -17,7 +17,7 @@ const CTA = () => {
           Today is the day to build the business of your dreams. Share your vision with the world.
         </p>
         <a
-          href="#contact"
+          href="contact"
           className="inline-block bg-[#e50914] hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide transition-all duration-300"
         >
           Start Now
